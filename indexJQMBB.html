@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Itis!</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+  <script type="text/template" id="loginpage">
+
+    <div class="container">
+      <div id="login">
+        <form action="#search">
+
+          <input type="text" name="firstname" value="username" id="username"><br>
+          <input type="password" name="lastname" value="password" id="password"><br>
+          <input id="loginbutton" type="submit" value="login"><br>
+
+          <a href="#signup" class="createaccount">create an account</a>
+
+        </form>
+      </div>
+    </div>
+
+  </script>
+
+  <script type="text/template" id="signup">
+    <div class="container">
+      <div id="login">
+        <form action="#search">
+
+          <input type="text" name="firstname" value="username" class="default_textbox"><br>
+          <input type="text" name="firstname" value="name" class="default_textbox"><br>
+          <input type="text" name="lastname" value="password" class="default_textbox"><br>
+          <input type="text" name="firstname" value="email" class="default_textbox"><br>
+          <input type="text" name="firstname" value="location" class="default_textbox"><br>
+          <input type="text" name="firstname" value="cuisine" class="default_textbox"><br>
+          <input id="loginbutton_createaccount" type="submit" value="sign up"><br>
+
+          <a href="#loginpage" class="default_createaccount">already have an account?</a>
+
+        </form>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="search">
+    <div class="container">
+      <div id="login">
+        <form action="#matches">
+
+          <input type="text" name="firstname" value="resturant/cuisine" class="search_textbox"><br>
+          <input type="text" name="firstname" value="city, state, or zip code" class="location_textbox"><br>
+          <input id="searchbutton" type="submit" value="search"><br>
+
+
+
+        </form>
+        <form action="#loginpage">
+          <input id="requestbutton" type="submit" value="logout">
+        </form>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="matches">
+    <img src="img/requests layers/statusbar.png" class="test">
+    <div class="backbutton"><div class="glyphicon glyphicon-arrow-left"></div> Back</div>
+    <img src="img/matches layers/Navigation Bar/back.png" class="">
+    <div class="searchicon col-xs-6"><img src="img/matches layers/searchicon.png"></div>
+    <div class="calendar col-xs-6"><img class="pull-right" src="img/matches layers/calendaricon.png"></div>
+    <div class="container">
+      <br>
+      <ul>
+        <li class="matchbox">
+
+          <img src="img/requests layers/samantha.png" class="userimg">
+          <div class="wrap_matches_top">
+            <p class="info_text"> <span class="twithandle">@food_junkie88</span><br>
+              <strong> <span class="match_name">Samantha Simon</span></strong><br>
+            </p>
+          </div>
+          <div class="matches_line"></div>
+          <div class="wrapper_matches">
+            <p>Distance: 0.3 miles away</p>
+            <p>Also likes: Mexian, Italian</p>
+            <p>Suggestions: Chipotle, Olive Garden</p>
+          </div>
+          <br>
+          <div class="schedulemeetup col-xs-6"><a href="#schedule">schedule meetup</a></div>
+
+          <div class="notinterested col-xs-6"><a href="#search">not interested</a></div>
+        </li>
+      </ul>
+    </div>
+  </script>
+  <script type="text/template" id="schedule">
+    <img src="img/requests layers/statusbar.png" class="test">
+    <img src="img/requests layers/Navigation Bar/navbar.png" class="">
+
+    <div class="container">
+      <br>
+      <ul>
+        <li class="schedule_user1">
+
+            <img src="img/requests layers/samantha.png" class="userimg">
+
+            <p class="info_text"> <strong>Samantha Simon</strong><br>
+              <i>26 Years Old<br> .01 Miles Away</i>
+            </p>
+            <br>
+            <div class="date">Date</div>
+            <br>
+            <div class="time">Time</div>
+        </li>
+      </ul>
+
+      <div class="wrapper">
+        <img src="img/schedule layers/clip10.png" class="scheduling_location" align="center">
+
+        <br><br>
+        <p class="default_text" align="center">Mexican Food near you:<br> <span class="loctext">Chipotle Mexican Grill</span></p>
+        <div class="requests_line"></div>
+        <p class="default_text" align="center"> change location </p>
+        <form action="#requests">
+          <input id="requestbutton" type="submit" value="request">
+        </form>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="requests">
+  <img src="img/requests layers/statusbar.png" class="test">
+
+  <img src="img/requests layers/Navigation Bar/navbar.png" class="">
+  <div class="container">
+    <h3 class="headingpending" align="center">Pending</h3>
+    <ul class="requestspage">
+      <li class="pending_user1">
+          <img src="img/requests layers/samantha.png" class="userimg">
+          <p class="pending_text"> <strong>Samantha Simon</strong><br> <i>Tomorrow 1:00PM at
+          <br>Chipotle Mexican Grill</i>
+          </p>
+      </li>
+    </ul>
+
+    <div class="requests_line"></div>
+    <h3 class="default_heading3" align="center">History</h3>
+    <br><br>
+    <p class="default_text" align="center">You havent grabbed a bite yet!</p>
+  </div>
+  </script>
+  <script src="lib/jquery-1.12.2.min.js"></script>
+
+  <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <script src="lib/underscore-min.js"></script>
+  <script src="lib/backbone-min.js"></script>
+
+  <script src="js/main1.js"></script>
+  </head>
+
+  <body>
+
+  </body>
+</html>
