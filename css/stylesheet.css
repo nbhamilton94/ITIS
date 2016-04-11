@@ -5,7 +5,7 @@ body {
 
   background-size: cover;
 }
-body.requests{
+.requests{
   background-color: rgb(79, 137, 12);
   background-image: none;
 }
